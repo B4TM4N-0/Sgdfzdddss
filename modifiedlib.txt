@@ -1128,6 +1128,7 @@
                     local min = options.min or 0
                     local max = options.max or 100
                     local valueText = options.valueText or "Slider: [VALUE]/" .. tostring(max)
+					valueText = valueText:gsub("%[MAX%]", tostring(max))
                     local default = options.default or math.clamp(0, min, max)
                     local decimals = options.decimals or 0.1
                     local flag = options.flag
